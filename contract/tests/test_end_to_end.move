@@ -14,7 +14,7 @@ module message_board_addr::test_end_to_end {
         assert!(string_content == string::utf8(b"hello world"), 3);
 
         // Post again, should overwrite the old message
-        message_board::post_message(sender, string::utf8(b"hello aptos"));
+        message_board::post_message(sender, string::utf8(b"hello aptos"))
 
         let string_content = message_board::get_message_content();
         assert!(string_content == string::utf8(b"hello aptos"), 16);
